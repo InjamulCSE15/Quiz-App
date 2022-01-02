@@ -6,7 +6,7 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 console.log(choices);
 
 let currentQuestion = {}
-let acceptingAnswer = true;
+let acceptingAnswer = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -172,7 +172,10 @@ getNewQuestion = () => {
     choices.forEach( choice => {
         const number = choice.dataset['number'];
         choice.innerText = currentQuestion['choice' + number];
-    })
+    });
+
+    availableQuestions.splice(questionIndex, 1);
+    acceptingAnswer = true;
 };
 
 startQuiz();
