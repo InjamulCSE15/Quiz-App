@@ -1,3 +1,4 @@
+// This console is for testing purpose:
 console.log("Hello from Quiz App!!!");
 
 const question = document.getElementById('question');
@@ -36,80 +37,134 @@ let questions = [
         choice4: "Image file",
         answer: 3
     },
-4. What is part of a database that holds only one type of information?
-(A) Report
-(B) Field
-(C) Record
-(D) File
-Correct Answer
-5. Who developed Yahoo?
-(A) Dennis Ritchie & Ken Thompson
-(B) David Filo & Jerry Yang
-(C) Vint Cerf & Robert Kahn
-(D) Steve Case & Jeff Bezos
-Correct Answer
-6. 'DB' computer abbreviation usually means?
-(A) Database
-(B) Double Byte
-(C) Data Block
-(D) Driver Boot
-Correct Answer
-7. '.INI' extension refers usually to what kind of file?
-(A) Image file
-(B) System file
-(C) Hypertext related file
-(D) Image Color Matching Profile file
-Correct Answer
-8. The sampling rate, (how many samples per second are stored) for a CD is?
-(A) 48.4 kHz
-(B) 22,050 Hz
-(C) 44.1 kHz
-(D) 48 kHz
-Correct Answer
-9. What do we call a network whose elements may be separated by some distance? It usually involves two or more small networks and dedicated high-speed telephone lines.
+    {
+        question: "What is part of a database that holds only one type of information?",
+        choice1: "Report",
+        choice1: "Field",
+        choice1: "Record",
+        choice1: "File",
+        answer: 2
+    },
+    {    
+        question: "Who developed Yahoo?",
+        choice1: "Dennis Ritchie & Ken Thompson",
+        choice2: "David Filo & Jerry Yang",
+        choice3: "Vint Cerf & Robert Kahn",
+        choice4: "Steve Case & Jeff Bezos",
+        answer: 2
+    },
+    {
 
- 
-(A) URL (Universal Resource Locator)
-(B) LAN (Local Area Network)
-(C) WAN (Wide Area Network)
-(D) World Wide Web
-Correct Answer
-10. Sometimes computers and cache registers in a foodmart are connected to a UPS system. What does UPS mean?
-(A) United Parcel Service
-(B) Uniform Product Support
-(C) Under Paneling Storage
-(D) Uninterruptable Power Supply
-Correct Answer
-11. What is FMD?
-(A) Fast-Ethernet Measuring Device
-(B) Flashing Media Diode
-(C) Fluorescent Multi-Layer Disc
-(D) Flash Media Driver
-Correct Answer
-12. Which of these is a documented hoax virus?
-(A) McDonalds screensaver
-(B) Alien.worm
-(C) Merry Xmas
-(D) Adolph
-Correct Answer
-13. What does SSL stand for?
-(A) Secure Socket Layer
-(B) System Socket Layer
-(C) Superuser System Login
-(D) Secure System Login
-Correct Answer
-14. What is a URL?
-(A) A computer software program
-(B) A type of UFO
-(C) The address of a document or "page" on the World Wide Web
-(D) An acronym for Uniform Resources Learning
-Correct Answer
-15. The Central Processing Unit is an embedded chip that acts as the 'brains' of a computer. What Intel chip was used in the Altair (the first real personal computer)?
-(A) 6502
-(B) 8080
-(C) 6400
-(D) 8286
-Correct Answer
+        question: "'DB' computer abbreviation usually means?",
+        choice1: "Database",
+        choice2: "Double Byte",
+        choice3: "Data Block",
+        choice4: "Driver Boot",
+        answer: 1
+    },
+    {
 
+        question: "'.INI' extension refers usually to what kind of file?",
+        choice1: "Image file",
+        choice2: "System file",
+        choice3: "Hypertext related file",
+        choice4: "Image Color Matching Profile file",
+        answer: 2
+    },
+    {
+
+        question: "The sampling rate, (how many samples per second are stored) for a CD is?",
+        choice1: "48.4 kHz",
+        choice2: "22,050 Hz",
+        choice3: "44.1 kHz",
+        choice4: "48 kHz",
+        answer: 3
+    },
+    {
+
+        question: "What do we call a network whose elements may be separated by some distance? It usually involves two or more small networks and dedicated high-speed telephone lines.",
+        choice1: "URL (Universal Resource Locator)",
+        choice2: "LAN (Local Area Network)",
+        choice3: "WAN (Wide Area Network)",
+        choice4: "World Wide Web",
+        answer: 3
+    },
+    {
+
+        question: "Sometimes computers and cache registers in a foodmart are connected to a UPS system. What does UPS mean?",
+        choice1: "United Parcel Service",
+        choice2: "Uniform Product Support",
+        choice3: "Under Paneling Storage",
+        choice4: "Uninterruptable Power Supply",
+        answer: 4
+    },
+    {
+        question: "What is FMD?",
+        choice1: "Fast-Ethernet Measuring Device",
+        choice2: "Flashing Media Diode",
+        choice3: "Fluorescent Multi-Layer Disc",
+        choice4: "Flash Media Driver",
+        answer: 3
+    },
+    {
+        question: "Which of these is a documented hoax virus?",
+        choice1: "McDonalds screensaver",
+        choice2: "Alien.worm",
+        choice3: "Merry Xmas",
+        choice4: "Adolph",
+        answer: 1
+    },
+    {
+        question: "What does SSL stand for?",
+        choice1: "Secure Socket Layer",
+        choice2: "System Socket Layer",
+        choice3: "Superuser System Login",
+        choice4: "Secure System Login",
+        answer: 3
+    },
+    {
+        question: "What is a URL?",
+        choice1: "A computer software program",
+        choice2: "A type of UFO",
+        choice3: "The address of a document or 'page' on the World Wide Web",
+        choice4: "An acronym for Uniform Resources Learning",
+        answer: 3
+    },
+    {
+        question: "The Central Processing Unit is an embedded chip that acts as the 'brains' of a computer. What Intel chip was used in the Altair (the first real personal computer)?",
+        choice1: "6502",
+        choice2: "8080",
+        choice3: "6400",
+        choice4: "8286",
+        answer: 2
+    },
+    {
+        question: "'.TMP' extension refers usually to what kind of file?",
+        choice1: "Compressed Archive file",
+        choice2: "Image file",
+        choice3: "Temporary file",
+        choice4: "Audio file",
+        answer: 3
     }
-]
+];
+
+// Constants
+
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 3;
+
+startQuiz = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    
+    console.log(availableQuestions);
+
+    getNewQuestion();
+};
+
+getNewQuestion = () => {
+    questionCounter++;
+};
+
+startQuiz();
