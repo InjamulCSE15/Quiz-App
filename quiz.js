@@ -178,4 +178,10 @@ getNewQuestion = () => {
     acceptingAnswer = true;
 };
 
+choices.forEach( choice => {
+    choice.addEventListener("click", (e) => {
+        console.log(e.target);
+    });
+});
+
 startQuiz();
