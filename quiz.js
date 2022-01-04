@@ -195,10 +195,10 @@ choices.forEach( choice => {
 
       //  console.log(selectedAnswer);
 
-        const classToApply = 'incorrect';
-        if( selectedAnswer == currentQuestion.answer){
-            classToApply = 'correct';
-        };
+        // const classToApply = 'incorrect';
+        // if( selectedAnswer == currentQuestion.answer){
+        //     classToApply = 'correct';
+        // };
     
     // Conditional (ternary) operator: 
 
