@@ -209,7 +209,12 @@ choices.forEach( choice => {
     console.log(classToApply);
 
     selectedChoice.parentElement.classList.add(classToApply);
-    getNewQuestion();
+    
+    setTimeout( () => {
+        selectedChoice.parentElement.classList.remove(classToApply);
+        getNewQuestion();
+    }, 1000);
+
 
     });
 });
