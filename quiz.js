@@ -200,12 +200,16 @@ choices.forEach( choice => {
         //     classToApply = 'correct';
         // };
     
+    // console.log(selectedAnswer == currentQuestion.answer);
+    
     // Conditional (ternary) operator: 
 
     const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+    
+    console.log(classToApply);
 
-      console.log(selectedAnswer == currentQuestion.answer);
-      getNewQuestion();
+    selectedChoice.parentElement.classList.add(classToApply);
+    getNewQuestion();
 
     });
 });
