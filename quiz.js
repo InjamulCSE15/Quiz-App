@@ -97,55 +97,57 @@ let questions = [
         choice3: "Under Paneling Storage",
         choice4: "Uninterruptable Power Supply",
         answer: 4
-    },
-    {
-        question: "What is FMD?",
-        choice1: "Fast-Ethernet Measuring Device",
-        choice2: "Flashing Media Diode",
-        choice3: "Fluorescent Multi-Layer Disc",
-        choice4: "Flash Media Driver",
-        answer: 3
-    },
-    {
-        question: "Which of these is a documented hoax virus?",
-        choice1: "McDonalds screensaver",
-        choice2: "Alien.worm",
-        choice3: "Merry Xmas",
-        choice4: "Adolph",
-        answer: 1
-    },
-    {
-        question: "What does SSL stand for?",
-        choice1: "Secure Socket Layer",
-        choice2: "System Socket Layer",
-        choice3: "Superuser System Login",
-        choice4: "Secure System Login",
-        answer: 3
-    },
-    {
-        question: "What is a URL?",
-        choice1: "A computer software program",
-        choice2: "A type of UFO",
-        choice3: "The address of a document or 'page' on the World Wide Web",
-        choice4: "An acronym for Uniform Resources Learning",
-        answer: 3
-    },
-    {
-        question: "The Central Processing Unit is an embedded chip that acts as the 'brains' of a computer. What Intel chip was used in the Altair (the first real personal computer)?",
-        choice1: "6502",
-        choice2: "8080",
-        choice3: "6400",
-        choice4: "8286",
-        answer: 2
-    },
-    {
-        question: "'.TMP' extension refers usually to what kind of file?",
-        choice1: "Compressed Archive file",
-        choice2: "Image file",
-        choice3: "Temporary file",
-        choice4: "Audio file",
-        answer: 3
-    }
+     }
+    //,
+    // {
+    //     question: "What is FMD?",
+    //     choice1: "Fast-Ethernet Measuring Device",
+    //     choice2: "Flashing Media Diode",
+    //     choice3: "Fluorescent Multi-Layer Disc",
+    //     choice4: "Flash Media Driver",
+    //     answer: 3
+    // }
+    //,
+    // {
+    //     question: "Which of these is a documented hoax virus?",
+    //     choice1: "McDonalds screensaver",
+    //     choice2: "Alien.worm",
+    //     choice3: "Merry Xmas",
+    //     choice4: "Adolph",
+    //     answer: 1
+    // },
+    // {
+    //     question: "What does SSL stand for?",
+    //     choice1: "Secure Socket Layer",
+    //     choice2: "System Socket Layer",
+    //     choice3: "Superuser System Login",
+    //     choice4: "Secure System Login",
+    //     answer: 3
+    // },
+    // {
+    //     question: "What is a URL?",
+    //     choice1: "A computer software program",
+    //     choice2: "A type of UFO",
+    //     choice3: "The address of a document or 'page' on the World Wide Web",
+    //     choice4: "An acronym for Uniform Resources Learning",
+    //     answer: 3
+    // },
+    // {
+    //     question: "The Central Processing Unit is an embedded chip that acts as the 'brains' of a computer. What Intel chip was used in the Altair (the first real personal computer)?",
+    //     choice1: "6502",
+    //     choice2: "8080",
+    //     choice3: "6400",
+    //     choice4: "8286",
+    //     answer: 2
+    // },
+    // {
+    //     question: "'.TMP' extension refers usually to what kind of file?",
+    //     choice1: "Compressed Archive file",
+    //     choice2: "Image file",
+    //     choice3: "Temporary file",
+    //     choice4: "Audio file",
+    //     answer: 3
+    // }
 ];
 
 // Constants
@@ -164,6 +166,10 @@ startQuiz = () => {
 };
 
 getNewQuestion = () => {
+    if(availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS) {
+        // Go to end page
+        return window.location.assign('/end.html');
+    }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
@@ -187,8 +193,19 @@ choices.forEach( choice => {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset['number'];
 
-        console.log(selectedAnswer);
-        getNewQuestion();
+      //  console.log(selectedAnswer);
+
+        const classToApply = 'incorrect';
+        if( selectedAnswer == currentQuestion.answer){
+            classToApply = 'correct';
+        };
+    
+    // Conditional (ternary) operator: 
+
+    const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+      console.log(selectedAnswer == currentQuestion.answer);
+      getNewQuestion();
 
     });
 });
