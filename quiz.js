@@ -84,34 +84,32 @@ let questions = [
         choice4: "48 kHz",
         answer: 3
     },
-    {
+    // {
 
-        question: "What do we call a network whose elements may be separated by some distance? It usually involves two or more small networks and dedicated high-speed telephone lines.",
-        choice1: "URL (Universal Resource Locator)",
-        choice2: "LAN (Local Area Network)",
-        choice3: "WAN (Wide Area Network)",
-        choice4: "World Wide Web",
+    //     question: "What do we call a network whose elements may be separated by some distance? It usually involves two or more small networks and dedicated high-speed telephone lines.",
+    //     choice1: "URL (Universal Resource Locator)",
+    //     choice2: "LAN (Local Area Network)",
+    //     choice3: "WAN (Wide Area Network)",
+    //     choice4: "World Wide Web",
+    //     answer: 3
+    // },
+    // {
+
+    //     question: "Sometimes computers and cache registers in a foodmart are connected to a UPS system. What does UPS mean?",
+    //     choice1: "United Parcel Service",
+    //     choice2: "Uniform Product Support",
+    //     choice3: "Under Paneling Storage",
+    //     choice4: "Uninterruptable Power Supply",
+    //     answer: 4
+    //  },
+    {
+        question: "What is FMD?",
+        choice1: "Fast-Ethernet Measuring Device",
+        choice2: "Flashing Media Diode",
+        choice3: "Fluorescent Multi-Layer Disc",
+        choice4: "Flash Media Driver",
         answer: 3
     },
-    {
-
-        question: "Sometimes computers and cache registers in a foodmart are connected to a UPS system. What does UPS mean?",
-        choice1: "United Parcel Service",
-        choice2: "Uniform Product Support",
-        choice3: "Under Paneling Storage",
-        choice4: "Uninterruptable Power Supply",
-        answer: 4
-     }
-    //,
-    // {
-    //     question: "What is FMD?",
-    //     choice1: "Fast-Ethernet Measuring Device",
-    //     choice2: "Flashing Media Diode",
-    //     choice3: "Fluorescent Multi-Layer Disc",
-    //     choice4: "Flash Media Driver",
-    //     answer: 3
-    // }
-    //,
     // {
     //     question: "Which of these is a documented hoax virus?",
     //     choice1: "McDonalds screensaver",
@@ -128,14 +126,14 @@ let questions = [
     //     choice4: "Secure System Login",
     //     answer: 3
     // },
-    // {
-    //     question: "What is a URL?",
-    //     choice1: "A computer software program",
-    //     choice2: "A type of UFO",
-    //     choice3: "The address of a document or 'page' on the World Wide Web",
-    //     choice4: "An acronym for Uniform Resources Learning",
-    //     answer: 3
-    // },
+    {
+        question: "What is a URL?",
+        choice1: "A computer software program",
+        choice2: "A type of UFO",
+        choice3: "The address of a document or 'page' on the World Wide Web",
+        choice4: "An acronym for Uniform Resources Learning",
+        answer: 3
+    },
     // {
     //     question: "The Central Processing Unit is an embedded chip that acts as the 'brains' of a computer. What Intel chip was used in the Altair (the first real personal computer)?",
     //     choice1: "6502",

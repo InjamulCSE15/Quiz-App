@@ -13,10 +13,17 @@
     <div class="container">
         <div id="end" class="flex-center flex-column">
             <h1 id="finalScore">0</h1>
+            
+            <!-- Start form -->
             <form action="#">
                 <input type="text" name="username" id="username" placeholder="User Name">
-                <button type="submit" class="btn">Save</button>
+                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(e)">Save</button>
             </form>
+            <!-- End form -->
+            
+            <a href="quiz.html" class="btn">Start Again</a>
+            <a href="/" class="btn">Go Home</a>
+
         </div>
     </div>
 
