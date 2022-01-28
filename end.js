@@ -1,5 +1,10 @@
+//Const Declare:
 const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
+const mostRecentScore = localStorage.getItem('mostRecentItem');
+const finalScore = document.getElementById('finalScore');
+
+finalScore.innerText = mostRecentScore;
 
 username.addEventListener("keyup", () => {
     console.log(username.value);
