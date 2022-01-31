@@ -25,4 +25,11 @@ username.addEventListener("keyup", () => {
 saveHighScore = (e) => {
     console.log('btn click');
     e.preventDefault();
+
+    const score = {
+        score: mostRecentScore,
+        name: username.value
+    };
+    highScores.push(score);
+    console.log(highScores);
 };
