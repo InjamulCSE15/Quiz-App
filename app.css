@@ -127,3 +127,20 @@ input {
 input::placeholder {
     color: #aaa;
 }
+
+/* Footer */
+
+footer > p {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+footer > p > a {
+    font-weight: 600;
+    color: #56a5eb;
+    text-decoration: none;
+}
+
+.foot {
+    text-align: center;
+}
