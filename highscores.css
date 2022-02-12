@@ -12,3 +12,7 @@
 .high-score:hover {
     transform: scale(1.035);
 }
+
+h1 {
+    font-size: 5rem;
+}
